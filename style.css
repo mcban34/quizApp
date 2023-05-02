@@ -22,9 +22,30 @@ body {
   height: 80vh;
   background: #6100C1;
 }
+.header .Navcontainer {
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+}
+.header .navParent {
+  display: flex;
+  justify-content: space-between;
+}
+.header .navParent .logo a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+.header .navParent .contact a {
+  background: #B2D93A;
+  color: #6100C1;
+  padding: 1rem 2rem;
+  border-radius: 1.7rem 0.5rem;
+  text-decoration: none;
+}
 .header .headerParent {
   display: flex;
-  height: 80vh;
+  height: 70vh;
 }
 .header .headerParent .headerContent {
   width: 50%;
@@ -32,6 +53,10 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+}
+.header .headerParent .headerContent .headerLeft h1 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
 }
 .header .headerParent .headerContent .headerLeft .playGameBtn {
   background: #FF7D56;
@@ -51,6 +76,27 @@ body {
   justify-content: center;
   text-align: center;
 }
+@media screen and (max-width: 1000px) {
+  .header .Navcontainer {
+    width: 95%;
+  }
+  .header .container {
+    width: 95%;
+  }
+  .header .headerParent {
+    height: 63vh;
+  }
+  .header .headerParent .headerImg {
+    display: none;
+  }
+  .header .headerParent .headerContent {
+    width: 100%;
+  }
+  .header .headerParent .headerContent h1 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+}
 
 .aboutCard .aboutCardParent {
   width: 100%;
@@ -58,6 +104,35 @@ body {
   background: white;
   transform: translateY(-20%);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.aboutCard .aboutCardParent .aboutCardContent {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutCard .aboutCardParent .card {
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+}
+.aboutCard .aboutCardParent .card h4 {
+  margin-top: 0.5rem;
+  color: #4e4e4e;
+}
+@media screen and (max-width: 650px) {
+  .aboutCard .container {
+    width: 95%;
+  }
+  .aboutCard .aboutCardParent {
+    height: auto;
+    transform: translateY(-5%);
+  }
+  .aboutCard .aboutCardParent .aboutCardContent {
+    display: block;
+  }
+  .aboutCard .aboutCardParent .aboutCardContent .card {
+    padding-top: 0;
+    padding: 1.4rem 0;
+  }
 }
 
 button, input {
