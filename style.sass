@@ -1,9 +1,62 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.container
+    width: 80%
+    margin: auto
+
+img
+    max-width: 90%   
+
+body
+    font-family: 'Ubuntu', sans-serif
+$bgColor: #6100C1
+$btnBg : #FF7D56
+.header
+    width: 100%
+    height: 80vh
+    background: $bgColor
+    .headerParent
+        display: flex
+        height: 80vh
+        .headerContent
+            width: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            color: white
+            .headerLeft
+                .playGameBtn
+                    background: $btnBg
+                    color: white
+                    text-decoration: none
+                    padding: 1rem 2rem
+                    border-radius: .5rem 2rem
+                p
+                    line-height: 1.7rem
+                    margin: 1.3rem 0 2.3rem 0
+        .headerImg
+            width: 50%
+            display: flex
+            align-items: end
+            justify-content: center
+            text-align: center
+
+.aboutCard
+    .aboutCardParent
+        width: 100%
+        height: 20vh
+        background: white
+        transform: translateY(-20%)
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+
+
+
 button,input
     width: 100%
     height: 2rem
     margin-top: .5rem
     display: block
 
-img
-    position: absolute
-    transition: 0.34s
