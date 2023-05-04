@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="BACKGROUND_2" data-name="BACKGROUND 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.84 82.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff1b8;
+      }
+
+      .cls-2 {
+        fill: #ffd766;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m47.35,32.94c.93,1.05,27.97-6,29.72,5.81,1.75,11.81-27.47,10.61-28.16,11.49-.69.89,9.12,28.41-5.18,29.95s-12.89-27.24-13.98-28.36S2.32,59.61,1.16,46.32s27.36-10.06,28.11-10.91-3.27-31.64,7.88-32c13.71-.45,9.61,28.86,10.2,29.53Z"/>
+  <circle class="cls-1" cx="40.63" cy="36.26" r="2.73"/>
+  <ellipse class="cls-1" cx="40.32" cy="20.34" rx="10.08" ry="3.68" transform="translate(19.12 60.22) rotate(-88.78)"/>
+</svg>
