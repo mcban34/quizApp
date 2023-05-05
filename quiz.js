@@ -95,3 +95,4 @@ document.querySelector(".soruAtla").addEventListener("click", function () {
     document.querySelector(".soruAtla").disabled = true
   }
 })
+

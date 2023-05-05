@@ -12,11 +12,10 @@ img
 
 body
     font-family: 'Ubuntu', sans-serif
+
 $bgColor: #6100C1
 $btnBg: #FF7D56
 $blackText : #4e4e4e
-
-
 
 .header
     width: 100%
@@ -74,14 +73,14 @@ $blackText : #4e4e4e
                 #artiIcon
                     right: 0
                     top: 50%
-                    animation: artiIcon linear 2s infinite
+                    transition: 4s
                 #piIcon
                     left: 50%
-                    animation: piIcon linear 2s infinite
+                    transition: 4s
                 #karekokIcon
                     left: 10%
                     top: 60%
-                    animation: karekokIcon linear 2s infinite
+                    transition: 4s
     @media screen and (max-width:1000px)
         .Navcontainer
             width: 95%
@@ -96,57 +95,6 @@ $blackText : #4e4e4e
                 h1
                     font-size: 2rem !important
                     line-height: 2.5rem !important
-
-    
-@keyframes artiIcon 
-  0% 
-    transform: translateX(0) translateY(0)
-  
-  25% 
-    transform: translateX(10px) translateY(5px)
-  
-  50% 
-    transform: translateX(0) translateY(10px)
-  
-  75% 
-    transform: translateX(-10px) translateY(5px)
-  
-  100% 
-    transform: translateX(0) translateY(0)
-
-@keyframes piIcon 
-  0% 
-    transform: translateX(0) translateY(0)
-  
-  25% 
-    transform: translateX(5px) translateY(10px)
-  
-  50% 
-    transform: translateX(10) translateY(0px)
-  
-  75% 
-    transform: translateX(5px) translateY(-10px)
-  
-  100% 
-    transform: translateX(0) translateY(0)
-@keyframes karekokIcon 
-  0% 
-    transform: translateX(0) translateY(0)
-  
-  25% 
-    transform: translateX(7px) translateY(12px)
-  
-  50% 
-    transform: translateX(8px) translateY(4px)
-  
-  75% 
-    transform: translateX(10px) translateY(-4px)
-  
-  100% 
-    transform: translateX(0) translateY(0)
-  
-
-
 .aboutCard
     .aboutCardParent
         width: 100%
@@ -176,7 +124,6 @@ $blackText : #4e4e4e
                     padding-top: 0
                     padding: 1.4rem 0 
     
-
 button,input
     width: 100%
     height: 2rem
