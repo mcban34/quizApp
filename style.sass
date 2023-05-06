@@ -16,6 +16,7 @@ body
 $bgColor: #6100C1
 $btnBg: #FF7D56
 $blackText : #4e4e4e
+$greenColor : #B2D93A
 
 .header
     width: 100%
@@ -36,7 +37,7 @@ $blackText : #4e4e4e
                 text-decoration: none
         .contact
             a
-                background: #B2D93A
+                background: $greenColor
                 color: $bgColor
                 padding: 1rem 2rem
                 border-radius: 1.7rem .5rem
@@ -124,12 +125,73 @@ $blackText : #4e4e4e
                     padding-top: 0
                     padding: 1.4rem 0 
     
-button,input
-    width: 100%
-    height: 2rem
-    margin-top: .5rem
-    display: block
 
-
-
-
+.gameBody
+    background-color:$bgColor
+    .gameContent
+        width: 100%
+        height: 100vh
+        display: flex
+        align-items: center
+        justify-content: center
+        .oyunBasla
+            width: 30%
+            background: white
+            border-radius: 10px
+            position: relative 
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 2rem 1rem
+            .oyunBaslaContent
+                width: 100%
+                .kural
+                    margin-top:2rem 
+                    display: flex
+                    .kuralImg
+                        width: 15%
+                    .kuralAciklama
+                        width: 80%
+                        margin-left: 1rem
+                        display: flex
+                        align-items: center
+            h3
+                color: $blackText
+            button
+                width: 100%
+                height: 4rem
+                background: $btnBg
+                border: none
+                color: white
+                cursor: pointer
+                border-radius: 10px
+                margin-top: 2rem
+                bottom: 0
+        .oyun
+            display: none
+            background: white
+            padding: 2rem 1rem
+            border-radius: 10px
+            button
+                width: 100%
+                height: 3rem
+                margin-top: 1rem
+                display: block
+                background: transparent
+                cursor: pointer
+                border: 1px solid gray
+                background: #ebebeb
+            .soruAtla
+                border: none
+                height: 3rem
+                color: white
+                cursor: pointer
+                border-radius: 10px
+                background: $btnBg
+    @media screen and (max-width:1000px)
+        .gameContent
+            .oyunBasla
+                width: 100%
+                height: 100%
+                button
+                    border-radius: 0 0 0 0 !important

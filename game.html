@@ -9,21 +9,66 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="oyun">
-    <h2 class="süre">Oyun Bitmesine 60 Saniye Kaldı!</h2>
-    <h3 class="soru"></h3>
-    <button class="cevapVer"></button>
-    <button class="cevapVer"></button>
-    <button class="cevapVer"></button>
-    <button class="cevapVer"></button>
-    <button class="soruAtla">Soru Atla! 5 Hakkınız Kaladı!</button>
-    <p class="mesaj"></p>
+<body class="gameBody">
+
+  <div class="gameContent">
+    <div class="oyunBasla">
+      <div class="oyunBaslaContent">
+        <h2>Matemetik Quizi</h2>
+        <p>Oyuna Başlamak Kurallara Göz Atmak İstersen!</p>
+        <div class="kural">
+          <div class="kuralImg">
+            <img src="img/sand-clock-svgrepo-com.svg" alt="">
+          </div>
+          <div class="kuralAciklama">
+            <div class="kuralAciklamaFlex">
+              <h3>1 Dakika!</h3>
+              <p>Soru sayısı gibi bir kısıtlamamız yok, sınırlarınız zorla ve 1 dakika içerisinde en fazla soruyu çözmeye çalış.</p>  
+            </div>
+          </div>
+        </div>
+        <div class="kural">
+          <div class="kuralImg">
+            <img src="img/skip-svgrepo-com (1).svg" alt="">
+          </div>
+          <div class="kuralAciklama">
+            <div class="kuralAciklamaFlex">
+              <h3>5 Soru Atla!</h3>
+              <p>Zorlandığın sorularda bekleme yapma! 5 soru atlama hakkını kullanarak yeni sorulara kavuşabilirsin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="kural">
+          <div class="kuralImg">
+            <img src="img/no-entry-svgrepo-com.svg" alt="">
+          </div>
+          <div class="kuralAciklama">
+            <div class="kuralAciklamaFlex">
+              <h3>3 Yanlış Hakkı!</h3>
+              <p>3 Yanlışında affetmeyiz haberin olsun! Soruların cevaplarını işaretlemeden önce bir daha düşün.</p>  
+            </div>
+          </div>
+        </div>
+        <button class="startGame">Oyuna Başla</button>
+      </div>
+    </div>
+    <div class="oyun">
+      <h2 class="süre">Oyun Bitmesine 60 Saniye Kaldı!</h2>
+      <h3 class="soru"></h3>
+      <button class="cevapVer"></button>
+      <button class="cevapVer"></button>
+      <button class="cevapVer"></button>
+      <button class="cevapVer"></button>
+      <button class="soruAtla">Soru Atla! 5 Hakkınız Kaladı!</button>
+      <p class="mesaj"></p>
+    </div>
+    <div class="cevapAlani">
+      <h2 class="sonuc"></h2>
+    </div>
   </div>
-  <div class="cevapAlani">
-    <h2 class="sonuc"></h2>
-  </div>
+
   <script src="quiz.js"></script>
+
 </body>
 
 </html>
