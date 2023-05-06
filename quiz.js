@@ -1,5 +1,8 @@
 
 let rstGeleCevaplar = []
+let oyun = document.querySelector(".oyun")
+let oyunBasla = document.querySelector(".oyunBasla")
+let cevapAlani = document.querySelector(".cevapAlani")
 
 function soruOlustur() {
   let rakam1 = Math.floor(Math.random() * 10)
@@ -36,55 +39,41 @@ function soruOlustur() {
   for (let i = 0; i < 4; i++) {
     let rstCevapIndex = Math.floor(Math.random() * rstGeleCevaplar.length)
     let rstCevap = rstGeleCevaplar[rstCevapIndex]
-    cevapVer[i].innerHTML = rstCevap
+    cevapVer[i].innerHTML = `${rstCevap}` 
     rstGeleCevaplar.splice(rstCevapIndex, 1)
   }
-
+  
 }
 
 
 
 
 //!DOM HAZIR
-let aracHareket = 0
+
 let hak = 3
-skor = 0
-
-soruOlustur()
-let sayac = 60
-let time = setInterval(() => {
-  sayac--
-  document.querySelector(".süre").innerHTML = `Oyun Bitmesine ${sayac} Saniye Kaldı!`
-  if (sayac == 0) {
-    clearInterval(time)
-    document.querySelector(".oyun").style.display = "none"
-    document.querySelector(".sonuc").innerHTML = `Süreniz Bitti! Toplam Skorunuz : ${skor}`
-  }
-}, 1000);
-
-
 let cevapVer = document.querySelectorAll(".cevapVer");
+let atlamaHakki = 5
+let skor = 0
 
 for (const element of cevapVer) {
   element.addEventListener("click", function () {
     if (element.innerHTML == islemSonuc) {
       soruOlustur()
       skor++
-      console.log(skor)
     }
     else {
       hak--
       document.querySelector(".mesaj").innerHTML = `Hatalı! ${hak} hakkın kaldı!`
       if (hak == 0) {
-        document.querySelector(".oyun").style.display = "none"
+        oyun.style.display = "none"
         document.querySelector(".sonuc").innerHTML = `Hakkınız Bitti! Toplam Skorunuz : ${skor}`
       }
     }
   })
 }
 
+
 //!SORU ATLA
-let atlamaHakki = 5
 document.querySelector(".soruAtla").addEventListener("click", function () {
   rstGeleCevaplar = []
   soruOlustur()
@@ -96,3 +85,22 @@ document.querySelector(".soruAtla").addEventListener("click", function () {
   }
 })
 
+//!oyuna başla
+document.querySelector(".startGame").addEventListener("click",()=>{
+  oyunBasla.style.display="none"
+  oyun.style.display="block"
+
+
+  soruOlustur()
+  // let sayac = 60
+  // let time = setInterval(() => {
+  //   sayac--
+  //   document.querySelector(".süre").innerHTML = `Oyun Bitmesine ${sayac} Saniye Kaldı!`
+  //   if (sayac == 0) {
+  //     clearInterval(time)
+  //     oyun.style.display = "none"
+  //     document.querySelector(".sonuc").innerHTML = `Süreniz Bitti! Toplam Skorunuz : ${skor}`
+  //   }
+  // }, 1000);
+
+})

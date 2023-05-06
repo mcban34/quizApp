@@ -150,9 +150,86 @@ body {
   }
 }
 
-button, input {
+.gameBody {
+  background-color: #6100C1;
+}
+.gameBody .gameContent {
   width: 100%;
-  height: 2rem;
-  margin-top: 0.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gameBody .gameContent .oyunBasla {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.gameBody .gameContent .oyunBasla .oyunBaslaContent {
+  width: 100%;
+}
+.gameBody .gameContent .oyunBasla .oyunBaslaContent .kural {
+  margin-top: 2rem;
+  display: flex;
+}
+.gameBody .gameContent .oyunBasla .oyunBaslaContent .kural .kuralImg {
+  width: 15%;
+}
+.gameBody .gameContent .oyunBasla .oyunBaslaContent .kural .kuralAciklama {
+  width: 80%;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.gameBody .gameContent .oyunBasla h3 {
+  color: #4e4e4e;
+}
+.gameBody .gameContent .oyunBasla button {
+  width: 100%;
+  height: 4rem;
+  background: #FF7D56;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 2rem;
+  bottom: 0;
+}
+.gameBody .gameContent .oyun {
+  display: none;
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+.gameBody .gameContent .oyun button {
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
   display: block;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid gray;
+  background: #ebebeb;
+}
+.gameBody .gameContent .oyun .soruAtla {
+  border: none;
+  height: 3rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #FF7D56;
+}
+@media screen and (max-width: 1000px) {
+  .gameBody .gameContent .oyunBasla {
+    width: 100%;
+    height: 100%;
+  }
+  .gameBody .gameContent .oyunBasla button {
+    border-radius: 0 0 0 0 !important;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 32 32" xml:space="preserve">
+<style type="text/css">
+	.pictogram_een{fill:#F4D6B0;}
+	.pictogram_twee{fill:#F8AD89;}
+	.pictogram_vijf{fill:#01A59C;}
+	.pictogram_zes{fill:#0C6667;}
+	.st0{fill:#F27261;}
+	.st1{fill:#E54D2E;}
+	.st2{fill:none;}
+	.st3{clip-path:url(#SVGID_2_);fill:#01A59C;}
+	.st4{clip-path:url(#SVGID_2_);fill:none;}
+	.st5{clip-path:url(#SVGID_2_);fill:#0C6667;}
+	.st6{fill:#F8AD89;}
+	.st7{fill:#0C6667;}
+</style>
+<g>
+	<path class="pictogram_twee" d="M16,28C9.373,28,4,22.627,4,16S9.373,4,16,4V28z"/>
+	<path class="pictogram_een" d="M16,28c6.627,0,12-5.373,12-12S22.627,4,16,4V28z"/>
+	<path class="pictogram_vijf" d="M28,16c0-6.627-5.373-12-12-12V0c8.837,0,16,7.163,16,16s-7.163,16-16,16v-4
+		C22.627,28,28,22.627,28,16z"/>
+	<path class="pictogram_zes" d="M16,28v4C7.163,32,0,24.837,0,16S7.163,0,16,0v4C9.373,4,4,9.373,4,16C4,22.627,9.373,28,16,28z
+		 M18.437,20.564L23,16l-4.563-4.564c-0.581-0.582-1.524-0.582-2.106,0s-0.582,1.524,0,2.106L18.788,16l-2.457,2.458
+		c-0.582,0.582-0.582,1.524,0,2.106C16.622,20.855,17.003,21,17.384,21C17.765,21,18.146,20.855,18.437,20.564z M11.437,20.564
+		L16,16l-4.563-4.564c-0.581-0.582-1.524-0.582-2.106,0s-0.582,1.524,0,2.106L11.788,16l-2.457,2.458
+		c-0.582,0.582-0.582,1.524,0,2.106C9.622,20.855,10.003,21,10.384,21S11.146,20.855,11.437,20.564z"/>
+</g>
+</svg>
