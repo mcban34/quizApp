@@ -3,6 +3,8 @@ let rstGeleCevaplar = []
 let oyun = document.querySelector(".oyun")
 let oyunBasla = document.querySelector(".oyunBasla")
 let cevapAlani = document.querySelector(".cevapAlani")
+let timeProgressContent = document.querySelector(".timeProgressContent")
+
 
 function soruOlustur() {
   let rakam1 = Math.floor(Math.random() * 10)
@@ -92,6 +94,28 @@ document.querySelector(".startGame").addEventListener("click",()=>{
 
 
   soruOlustur()
+  const progressBar = document.querySelector(".timeProgressContent");
+  const totalTime = 60 * 1000; // 60 saniye (1 dakika) toplam süre
+  let startTime = Date.now(); // başlangıç zamanı
+  let progress;
+
+  function animate() {
+    const currentTime = Date.now(); // şu anki zaman
+    const elapsedTime = currentTime - startTime; // geçen süre
+    progress = (elapsedTime / totalTime) * 100; // ilerleme yüzdesi
+
+    if (progress >= 100) {
+      progress = 100; // ilerleme çubuğu tamamen dolu olsun
+    } else {
+      requestAnimationFrame(animate); // animasyonu devam ettir
+    }
+
+    progressBar.style.width = `${progress}%`; // ilerleme çubuğunu güncelle
+  }
+
+  animate(); // animasyonu başlat
+
+//?PROGRESS SETINTERVAL
   // let sayac = 60
   // let time = setInterval(() => {
   //   sayac--
