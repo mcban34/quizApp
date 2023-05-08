@@ -173,6 +173,14 @@ $greenColor : #B2D93A
             padding: 2rem 1rem
             border-radius: 10px
             width: 40%
+            text-align: center
+            .soruDiv
+                background: $bgColor
+                display: inline-block
+                margin-top: 1rem
+                padding: 1rem 2rem
+                color: white
+                border-radius: 1rem    
             button
                 width: 100%
                 height: 3rem
@@ -182,6 +190,7 @@ $greenColor : #B2D93A
                 cursor: pointer
                 border: 1px solid gray
                 background: #ebebeb
+                border-radius: .5rem
             .soruAtla
                 border: none
                 height: 3rem
@@ -192,17 +201,24 @@ $greenColor : #B2D93A
             .timeProgress
                 width: 100%
                 height: 1.5rem
-                border: 1px solid $bgColor
+                border: 1px solid $btnBg
                 margin-bottom: 1rem
                 .timeProgressContent
-                    background-color: $bgColor
+                    background-color: $btnBg
                     height: 100%
                     width: 0px
-                    // transition: width 0.1s ease-in-out;
-                    // transition: 1s linear;
-                    // transition: .34s
-                    // background-color: yellow
-
+        .cevapAlani
+            display: none
+            background: white
+            color: $bgColor
+            padding: 2rem 
+            button
+                width: 100%
+                height: 3rem
+                background: $btnBg
+                border: none
+                color: white
+                margin-top: 1rem
     @media screen and (max-width:1000px)
         .gameContent
             .oyunBasla
@@ -210,5 +226,5 @@ $greenColor : #B2D93A
                 height: 100%
                 button
                     border-radius: 0 0 0 0 !important
-            .oyun
+            .oyun,.cevapAlani
                 width: 95%

@@ -4,6 +4,8 @@ let oyun = document.querySelector(".oyun")
 let oyunBasla = document.querySelector(".oyunBasla")
 let cevapAlani = document.querySelector(".cevapAlani")
 let timeProgressContent = document.querySelector(".timeProgressContent")
+let sonucText = document.querySelector(".sonuc")
+let soruAtla = document.querySelector(".soruAtla")
 
 
 function soruOlustur() {
@@ -47,7 +49,9 @@ function soruOlustur() {
   
 }
 
+function cevapAlaniAc(){
 
+}
 
 
 //!DOM HAZIR
@@ -69,6 +73,7 @@ for (const element of cevapVer) {
       if (hak == 0) {
         oyun.style.display = "none"
         document.querySelector(".sonuc").innerHTML = `Hakkınız Bitti! Toplam Skorunuz : ${skor}`
+        cevapAlani.style.display="block"
       }
     }
   })
@@ -76,14 +81,15 @@ for (const element of cevapVer) {
 
 
 //!SORU ATLA
-document.querySelector(".soruAtla").addEventListener("click", function () {
+soruAtla.addEventListener("click", function () {
   rstGeleCevaplar = []
   soruOlustur()
   atlamaHakki--
-  document.querySelector(".soruAtla").innerHTML = `Soru Atla! ${atlamaHakki} Hakkınız Kaladı!`
+  soruAtla.innerHTML = `Soru Atla! ${atlamaHakki} Hakkınız Kaladı!`
   if (atlamaHakki == 0) {
-    document.querySelector(".soruAtla").innerHTML = "Hakkınız Bitti!"
-    document.querySelector(".soruAtla").disabled = true
+    soruAtla.innerHTML = "Hakkınız Bitti!"
+    soruAtla.style.background="rgb(255, 125, 86,.5)"
+    soruAtla.disabled = true
   }
 })
 
@@ -95,25 +101,37 @@ document.querySelector(".startGame").addEventListener("click",()=>{
 
   soruOlustur()
   const progressBar = document.querySelector(".timeProgressContent");
-  const totalTime = 60 * 1000; // 60 saniye (1 dakika) toplam süre
-  let startTime = Date.now(); // başlangıç zamanı
+  const totalTime = 5 * 1000;
+  let startTime = Date.now();
   let progress;
 
   function animate() {
-    const currentTime = Date.now(); // şu anki zaman
-    const elapsedTime = currentTime - startTime; // geçen süre
-    progress = (elapsedTime / totalTime) * 100; // ilerleme yüzdesi
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+    progress = (elapsedTime / totalTime) * 100;
 
-    if (progress >= 100) {
-      progress = 100; // ilerleme çubuğu tamamen dolu olsun
+    if (hak==0){
+      document.querySelector(".sonuc").innerHTML = `Hakkınız Bitti! Toplam Skorunuz : ${skor}`
+    }
+    else if (progress >= 100) {
+      progress = 100;
+      oyun.style.display = "none"
+      cevapAlani.style.display="block"
+      sonucText.innerHTML= `Toplam Skorunuz : ${skor}` 
+      
     } else {
-      requestAnimationFrame(animate); // animasyonu devam ettir
+      requestAnimationFrame(animate);
     }
 
-    progressBar.style.width = `${progress}%`; // ilerleme çubuğunu güncelle
+    progressBar.style.width = `${progress}%`;
   }
 
-  animate(); // animasyonu başlat
+  animate();
+
+//?yeniOyun
+document.querySelector(".newGame").addEventListener("click",()=>{
+  location.reload()
+})
 
 //?PROGRESS SETINTERVAL
   // let sayac = 60
