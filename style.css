@@ -40,7 +40,7 @@ body {
   background: #B2D93A;
   color: #6100C1;
   padding: 1rem 2rem;
-  border-radius: 1.7rem 0.5rem;
+  border-radius: 10px;
   text-decoration: none;
 }
 .header .headerParent {
@@ -63,7 +63,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 1rem 2rem;
-  border-radius: 0.5rem 2rem;
+  border-radius: 10px;
 }
 .header .headerParent .headerContent .headerLeft p {
   line-height: 1.7rem;
@@ -92,6 +92,12 @@ body {
   transition: 4s;
 }
 @media screen and (max-width: 1000px) {
+  .header .navParent .contact {
+    margin-top: 0.6rem;
+  }
+  .header .navParent .contact a {
+    padding: 0.7rem 1rem;
+  }
   .header .Navcontainer {
     width: 95%;
   }

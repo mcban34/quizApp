@@ -101,7 +101,7 @@ document.querySelector(".startGame").addEventListener("click",()=>{
 
   soruOlustur()
   const progressBar = document.querySelector(".timeProgressContent");
-  const totalTime = 5 * 1000;
+  const totalTime = 60 * 1000;
   let startTime = Date.now();
   let progress;
 
